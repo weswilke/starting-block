@@ -72,3 +72,13 @@ $round-to-nearest-half-line	: false;  				// Round the line height to the neares
 @function em-base($target, $context: $base-line-height) {
    @return emify($target, $context);
 }
+
+//Susy
+// The 960gs in 1140px
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 10px;
+
+$container-style: static;
+$container-width: 1140px;

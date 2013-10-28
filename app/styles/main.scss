@@ -27,6 +27,8 @@
 @import "libs/settings";
 @import "libs/mixins";
 
+//@import "susy";
+
 
 
 /* ::Clearfixs and extends. Use which suits best */
@@ -78,13 +80,28 @@ a {
 @import "libs/forms";
 
 
-
 // -------------------------------------------------------------------------------------------------------
 
 // All the below can be removed if need be
 
 // -------------------------------------------------------------------------------------------------------
 
+//.larger-960-container { @include container; }
+
+@for $i from 1 through $total-columns {
+	.col-#{$i}-#{$total-columns} {
+		@include span-columns($i, $total-columns);
+	}
+}
+.col-last { @include omega; }
+.col-test *[class*='col-'] {
+	background: #ccc;
+	text-align: center;
+	border: 1px solid #fff;
+	margin: 0 -1px;
+	min-height: 50px;
+	line-height: 50px;
+}
 
 
 

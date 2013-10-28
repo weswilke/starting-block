@@ -106,6 +106,8 @@ module.exports = function (grunt) {
         },
         compass: {
             options: {
+            	require: 'susy',
+            	//config: config.rb,
                 sassDir: '<%= yeoman.app %>/styles',
                 cssDir: '.tmp/styles',
                 generatedImagesDir: '.tmp/images/generated',
@@ -125,6 +127,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 options: {
+                	//require: 'susy',
                     generatedImagesDir: '<%= yeoman.dist %>/images/generated'
                 }
             },
